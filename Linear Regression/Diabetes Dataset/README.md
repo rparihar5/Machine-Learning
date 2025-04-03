@@ -1,35 +1,38 @@
-Diabetes Dataset - Linear Regression Model
+# 📊 Diabetes Dataset - Linear Regression Model
 
-This repository contains an implementation of a Linear Regression Model on the Diabetes Dataset from sklearn.datasets. The goal of this project is to predict diabetes progression based on given medical features.
+This repository contains an implementation of a **Linear Regression Model** on the **Diabetes Dataset** from `sklearn.datasets`. The goal of this project is to predict diabetes progression based on given medical features.
 
-Dataset Overview
+---
 
-The Diabetes dataset consists of 10 medical features used to predict the diabetes progression measured one year after baseline.
+## 📌 Dataset Overview
+The **Diabetes dataset** consists of 10 medical features used to predict the diabetes progression measured one year after baseline.
 
-Implementation Details
+📂 **Dataset Source**: Scikit-learn's built-in Diabetes dataset
 
-Dataset: Scikit-learn's built-in Diabetes dataset
+---
 
-Model Used: Linear Regression
+## 🛠 Implementation Details
 
-Libraries Used: numpy, pandas, matplotlib, seaborn, sklearn
+🔹 **Model Used:** Linear Regression  
+🔹 **Libraries Used:** `numpy`, `pandas`, `matplotlib`, `seaborn`, `sklearn`
 
-Model Performance
+---
 
+## 📊 Model Performance
 Below are the key evaluation metrics for the trained model:
 
-Mean Squared Error (MSE): XX.XXXX
+| Metric | Value |
+|--------|------|
+| **Mean Squared Error (MSE)** | `2790.81` |
+| **Coefficient of Determination (R² Score)** | `0.51` |
+| **Intercept** | `152.89112210923963` |
 
-Mean Absolute Error (MAE): XX.XXXX
+---
 
-R² Score: XX.XXXX
+## 📈 Scatter Plot of Predictions
+To visualize the model's predictions, we created a scatter plot comparing actual values (`y_test`) and predicted values (`y_pred`).
 
-(Replace XX.XXXX with actual computed values)
-
-Scatter Plot of Predictions
-
-To visualize the model's predictions, we created a scatter plot comparing actual values (y_test) and predicted values (y_pred).
-
+```python
 import seaborn as sns
 import matplotlib.pyplot as plt
 
@@ -37,54 +40,52 @@ plt.figure(figsize=(8,6))
 sns.scatterplot(x=y_test, y=y_pred)
 plt.xlabel("Actual Values (y_test)")
 plt.ylabel("Predicted Values (y_pred)")
-plt.title("Actual vs Predicted Diabetes Progression")
+plt.title("📉 Actual vs Predicted Diabetes Progression")
 plt.show()
+```
 
-Key Observations
+---
 
-A strong diagonal trend in the scatter plot would indicate accurate predictions.
+## 🔍 Key Observations
+✅ A strong diagonal trend in the scatter plot would indicate **accurate predictions**.  
+⚠️ High dispersion from the diagonal suggests **room for improvement**.  
+📌 **Feature Importance (Coefficients):**
 
-High dispersion from the diagonal suggests room for improvement.
+| Feature Index | Coefficient Value |
+|--------------|------------------|
+| **0** | `-34.3289` |
+| **1** | `-233.2862` |
+| **2** | `487.0310` |
+| **3** | `375.6326` |
+| **4** | `-446.9244` |
+| **5** | `184.5480` |
+| **6** | `-51.4008` |
+| **7** | `234.6145` |
+| **8** | `606.5197` |
+| **9** | `44.7123` |
 
-Feature importance analysis showed that the most influential features are:
+> 📌 The **most influential feature** appears to be **Feature 8**, having the highest coefficient value of `606.5197`.
 
-Feature 1: X.XXXX
+---
 
-Feature 2: X.XXXX
-
-(Replace with actual feature names and coefficients)
-
-Possible Improvements
-
+## 🚀 Possible Improvements
 To further improve the model, consider:
+- 🔄 **Trying Polynomial Regression** to capture non-linearity.
+- 📏 **Implementing Feature Scaling** for better performance.
+- 🧮 **Exploring Ridge/Lasso Regression** to handle multicollinearity.
 
-Trying Polynomial Regression to capture non-linearity.
+---
 
-Implementing Feature Scaling for better performance.
+## 👤 Author
+📌 **Rohit Parihar** 
+🔗 LinkedIn: [Your Profile](www.linkedin.com/in/rohitpariharr)
 
-Exploring Ridge/Lasso Regression to handle multicollinearity.
+---
 
-How to Run the Project
+## 📜 License
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-Clone this repository:
+---
 
-git clone https://github.com/yourusername/diabetes-regression.git
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run the script:
-
-python linear_regression.py
-
-Author
-
-Your Name (Replace with your actual name)
-
-LinkedIn: Your Profile
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+✨ **Feel free to modify and enhance this project as needed. Happy coding!** 🚀
 
